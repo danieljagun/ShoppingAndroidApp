@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_purchase"
+        android:title="PURCHASE"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_cart"
+        android:title="VIEW CART"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_update"
+        android:title="UPDATE"
+        app:showAsAction="never" />
+
+</menu>

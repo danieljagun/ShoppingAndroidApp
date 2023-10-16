@@ -1,0 +1,75 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/loginimg"
+    tools:context=".ShoppingActivity">
+
+    <EditText
+        android:id="@+id/product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product Name"
+        android:inputType="text"
+        android:textSize="30sp"
+        android:textColorHint="@android:color/black" />
+
+    <EditText
+        android:id="@+id/item_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantity"
+        android:textSize="30sp"
+        android:inputType="number"
+        android:textColorHint="@android:color/black" />
+
+    <EditText
+        android:id="@+id/unit_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Unit Price"
+        android:textSize="30sp"
+        android:inputType="numberDecimal"
+        android:textColorHint="@android:color/black" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/lavender"
+        android:text="Add Item"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"/>
+
+    <EditText
+        android:id="@+id/remove_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Product Name to Remove"
+        android:textSize="30sp"
+        android:inputType="text"
+        android:textColorHint="@android:color/black" />
+
+    <Button
+        android:id="@+id/remove_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/lavender"
+        android:text="Remove Item"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"/>
+
+    <Button
+        android:id="@+id/view_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/lavender"
+        android:text="View Shopping Cart"
+        android:layout_marginTop="16dp"
+        android:textSize="32sp"/>
+
+</LinearLayout>
