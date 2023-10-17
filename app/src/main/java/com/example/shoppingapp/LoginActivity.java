@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Patterns;
@@ -84,30 +85,22 @@ public class LoginActivity extends AppCompatActivity {
 
         CheckBox stayLoggedInCheckbox = findViewById(R.id.stayLoggedInCheckbox);
         stayLoggedInCheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
-                SharedPreferences.Editor editor = preferences.edit();
-                editor.putBoolean("stayLoggedIn", isChecked);
-                editor.apply();
+
             }
         });
-
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        boolean stayLoggedIn = preferences.getBoolean("stayLoggedIn", false);
-
-        if (stayLoggedIn) {
-            FirebaseUser currentUser = auth.getCurrentUser();
-            if (currentUser != null) {
-                startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                finish();
+        FirebaseUser currentUser = auth.getCurrentUser();
+        if (currentUser != null) {
+            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            finish();
             }
         }
     }
-}
 

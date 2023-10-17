@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -73,13 +74,11 @@ public class SignUpActivity extends AppCompatActivity {
         });
     }
 
-    // Validate email using a regular expression
     private boolean isEmailValid(String email) {
         String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
         return email.matches(emailPattern) && !email.contains(" ");
     }
 
-    // Validate password for length, presence of at least one digit, and no space
     private boolean isPasswordValid(String password) {
         return password.length() >= 6 && password.matches(".*\\d.*") && !password.contains(" ");
     }

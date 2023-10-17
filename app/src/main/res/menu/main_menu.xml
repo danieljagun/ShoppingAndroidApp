@@ -9,12 +9,7 @@
 
     <item
         android:id="@+id/action_cart"
-        android:title="VIEW CART"
-        app:showAsAction="never" />
-
-    <item
-        android:id="@+id/action_update"
-        android:title="UPDATE"
+        android:title="CHECKOUT"
         app:showAsAction="never" />
 
 </menu>

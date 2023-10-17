@@ -2,7 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="blue">#4169e1</color>
+    <color name="blue">#6d77fc</color>
     <color name="lavender">#8692f7</color>
     <color name="yellow">#FFFF00</color>
+
+    <color name="navigationBarColor">#FF000000</color>
 </resources>
