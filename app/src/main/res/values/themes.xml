@@ -11,5 +11,6 @@
 
     <style name="CustomActionBar" parent="Widget.AppCompat.ActionBar">
         <item name="android:background">@color/lavender</item>
+
     </style>
 </resources>

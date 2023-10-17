@@ -70,10 +70,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="30dp"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="@color/blue"
                 android:text="Login"
                 android:textSize="18sp"
-                app:cornerRadius="20dp" />
+                app:cornerRadius = "0dp"/>
 
             <TextView
                 android:id="@+id/signupRedirectText"

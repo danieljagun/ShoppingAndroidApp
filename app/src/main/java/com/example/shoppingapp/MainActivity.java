@@ -1,6 +1,7 @@
 package com.example.shoppingapp;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.blue)));
 
         auth = FirebaseAuth.getInstance();
         logoutButton = findViewById(R.id.logout_button);
@@ -61,10 +64,9 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         } else if (itemId == R.id.action_cart) {
-            Toast.makeText(MainActivity.this, "Select Cart", Toast.LENGTH_LONG).show();
-            return true;
-        } else if (itemId == R.id.action_update) {
-            Toast.makeText(MainActivity.this, "Select Update", Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, "Loading Shopping Cart", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(MainActivity.this, CheckoutActivity.class);
+            startActivity(intent);
             return true;
         }
         return false;
