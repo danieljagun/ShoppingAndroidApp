@@ -1,8 +1,5 @@
 package com.example.shoppingapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +7,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -54,7 +54,7 @@ public class PaymentActivity extends AppCompatActivity {
                                 }
                             } else if (part.contains("Quantity: ")) {
                                 try {
-                                    String quantityString = part.replaceAll("[^0-9]", ""); // extract numbers from the string
+                                    String quantityString = part.replaceAll("[^0-9]", "");
                                     totalQuantity += Integer.parseInt(quantityString);
                                 } catch (NumberFormatException e) {
                                     e.printStackTrace();
@@ -70,7 +70,6 @@ public class PaymentActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
                 Toast.makeText(PaymentActivity.this, "Failed to retrieve shopping list", Toast.LENGTH_SHORT).show();
             }
         });
@@ -109,7 +108,6 @@ public class PaymentActivity extends AppCompatActivity {
     }
 
     private boolean isDateValid(String date) {
-        // You can implement your date validation logic here
         return true;
     }
 }

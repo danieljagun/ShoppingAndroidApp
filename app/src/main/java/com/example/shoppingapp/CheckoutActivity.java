@@ -2,13 +2,11 @@ package com.example.shoppingapp;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,7 +20,7 @@ import java.util.ArrayList;
 
 public class CheckoutActivity extends AppCompatActivity {
 
-    private ListView cartListView;
+    private ListView checkoutList;
     private Button payNowButton;
     private ArrayList<String> shoppingList;
 
@@ -32,7 +30,7 @@ public class CheckoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
 
-        cartListView = findViewById(R.id.cartListView);
+        checkoutList = findViewById(R.id.cartList);
         payNowButton = findViewById(R.id.payNowButton);
 
         payNowButton.setOnClickListener(new View.OnClickListener() {
@@ -45,7 +43,7 @@ public class CheckoutActivity extends AppCompatActivity {
 
         shoppingList = new ArrayList<>();
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, shoppingList);
-        cartListView.setAdapter(adapter);
+        checkoutList.setAdapter(adapter);
 
         FirebaseDatabase.getInstance().getReference("shoppingList").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -58,12 +56,11 @@ public class CheckoutActivity extends AppCompatActivity {
                 adapter.notifyDataSetChanged();
             }
 
-
-
             @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                // Handle error
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
+
         });
     }
 }

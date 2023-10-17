@@ -1,10 +1,8 @@
 package com.example.shoppingapp;
 
 import android.content.DialogInterface;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -35,7 +33,6 @@ public class ShoppingActivity extends AppCompatActivity {
     private int totalQuantity = 0;
     private TextView totalTextView;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +49,6 @@ public class ShoppingActivity extends AppCompatActivity {
         productNamesList = new ArrayList<>();
         auth = FirebaseAuth.getInstance();
 
-
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +56,6 @@ public class ShoppingActivity extends AppCompatActivity {
                 String product = productName.getText().toString().trim();
                 String quan = quantity.getText().toString();
                 String price = unitPrice.getText().toString();
-
 
                 if (product.isEmpty()) {
                     productName.setError("Product name cannot be empty");
@@ -93,7 +88,7 @@ public class ShoppingActivity extends AppCompatActivity {
                             Toast.makeText(ShoppingActivity.this, "Item added to Shopping Cart", Toast.LENGTH_SHORT).show();
                         }
                     } catch (NumberFormatException e) {
-                        // Handle NumberFormatException for invalid format input
+
                         Toast.makeText(ShoppingActivity.this, "Invalid quantity or price format, try again", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -115,9 +110,9 @@ public class ShoppingActivity extends AppCompatActivity {
                         }
                         ShoppingListDialog(firebaseShoppingList);
                     }
+
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
-                        // Handle the error
                         Toast.makeText(ShoppingActivity.this, "Failed to retrieve shopping list", Toast.LENGTH_SHORT).show();
                     }
                 });
