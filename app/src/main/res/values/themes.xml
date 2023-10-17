@@ -1,7 +1,7 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.ShoppingApp" parent="Theme.Material3.DayNight">
-        <item name="colorPrimaryVariant">@color/lavender</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="android:actionBarStyle">@style/CustomActionBar</item>
@@ -10,7 +10,7 @@
     <style name="Theme.ShoppingApp" parent="Base.Theme.ShoppingApp" />
 
     <style name="CustomActionBar" parent="Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/lavender</item>
+        <item name="android:background">@color/blue</item>
 
     </style>
 </resources>

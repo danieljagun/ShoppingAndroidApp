@@ -1,12 +1,11 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:background="@drawable/loggedimage"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".ShoppingActivity">
 
     <EditText
@@ -15,43 +14,43 @@
         android:layout_height="wrap_content"
         android:hint="Product Name"
         android:inputType="text"
-        android:textSize="30sp"
-        android:textColorHint="@android:color/black" />
+        android:textColorHint="@android:color/black"
+        android:textSize="30sp" />
 
     <EditText
         android:id="@+id/item_quantity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Quantity"
-        android:textSize="30sp"
         android:inputType="number"
-        android:textColorHint="@android:color/black" />
+        android:textColorHint="@android:color/black"
+        android:textSize="30sp" />
 
     <EditText
         android:id="@+id/unit_price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Unit Price"
-        android:textSize="30sp"
         android:inputType="numberDecimal"
-        android:textColorHint="@android:color/black" />
+        android:textColorHint="@android:color/black"
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/add_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/black"
         android:text="Add Item"
-        android:layout_marginTop="16dp"
-        android:textSize="24sp"/>
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/view_items"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:backgroundTint="@color/black"
         android:text="View Shopping Cart"
-        android:layout_marginTop="16dp"
-        android:textSize="32sp"/>
+        android:textSize="32sp" />
 
 </LinearLayout>

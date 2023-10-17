@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:background="@drawable/backshop"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".SignUpActivity">
 
     <androidx.cardview.widget.CardView
@@ -20,76 +19,76 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_gravity="center_horizontal"
-            android:padding="24dp"
-            android:background="@drawable/custom_edittext">
+            android:background="@drawable/custom_edittext"
+            android:orientation="vertical"
+            android:padding="24dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Enter Payment Details"
-                android:textSize="36sp"
                 android:textAlignment="center"
-                android:textStyle="bold"
-                android:textColor="@color/blue"/>
+                android:textColor="@color/blue"
+                android:textSize="36sp"
+                android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/payment_number"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/payment_number"
-                android:background="@drawable/custom_edittext"
                 android:layout_marginTop="40dp"
-                android:padding="8dp"
-                android:hint="Card Number"
+                android:background="@drawable/custom_edittext"
                 android:drawableLeft="@drawable/baseline_credit_card_24"
+                android:drawablePadding="8dp"
+                android:hint="Card Number"
                 android:inputType="number"
                 android:maxLength="16"
-                android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:padding="8dp"
+                android:textColor="@color/black" />
 
             <EditText
+                android:id="@+id/payment_date"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/payment_date"
-                android:background="@drawable/custom_edittext"
                 android:layout_marginTop="20dp"
-                android:padding="8dp"
-                android:hint="MM/YY"
-                android:drawableLeft="@drawable/baseline_date_range_24"
-                android:inputType="number"
+                android:background="@drawable/custom_edittext"
                 android:digits="0123456789/"
-                android:maxLength="5"
+                android:drawableLeft="@drawable/baseline_date_range_24"
                 android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:hint="MM/YY"
+                android:inputType="number"
+                android:maxLength="5"
+                android:padding="8dp"
+                android:textColor="@color/black" />
 
             <Button
+                android:id="@+id/payment_button"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Pay Now"
-                android:id="@+id/payment_button"
-                android:textSize="18sp"
                 android:layout_marginTop="30dp"
-                android:backgroundTint="@color/lavender"
-                app:cornerRadius = "0dp"/>
+                android:backgroundTint="@color/blue"
+                android:text="Pay Now"
+                android:textSize="18sp"
+                app:cornerRadius="0dp" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/total_value"
-                android:textSize="18sp"
-                android:textColor="@color/black"
-                android:layout_marginTop="20dp"
-                android:text="Total value of items: " />
-
-            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/total_quantity"
-                android:textSize="18sp"
-                android:textColor="@color/black"
                 android:layout_marginTop="20dp"
-                android:text="Total quantity of items: " />
+                android:text="Total value of items: "
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/total_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Total quantity of items: "
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
